@@ -11,9 +11,31 @@ $(document).ready(function() {
         fade: true
     });
 
-    $('.posts-big-carousel').slick();
+    $('.posts-big-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+
+
+        ]
+    });
     $('.posts-small-carousel').slick({
         autoplay: true,
+        infinate: true,
         arrows: false,
         dots: true
     });
